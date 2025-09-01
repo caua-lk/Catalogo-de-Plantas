@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Tema claro padrão */
+body.light-theme{
+  --body_color: #75ca86;
+  --logo_color: #2e5939;
+  --search_box_color: #e0d4b7;
+  --card_color: #c7e7a4;
+  --container_color: #79d592;
+  --core_color: #c8e6c9;
+  --text_color: #3e3e3e;
+  --navegator_color: #a2cfa5;
+  --search_input_color: #ffffff;    
+  --search_hover_color: #d6e5c6;    
+  --search_focus_color: #c8e6c9; 
+  --footer_color: #09581d;
+}
+
+/* Tema escuro se o sistema estiver em dark mode */
+body.dark-theme{
+    --body_color: #367237;
+    --logo_color: #a2cfa5;
+    --search_box_color: #3e3e3e;
+    --card_color: #2f4f4f;
+    --container_color: #263238;
+    --core_color: #4caf50;
+    --text_color: #f4f4f4;
+    --navegator_color: #2e5939;
+    --search_input_color: #37474f;
+    --search_hover_color: #4caf50;
+    --search_focus_color: #66bb6a;
+    --footer_color: #509e63;
+  }
+
+body {
+  font-family: 'Segoe UI';
+  background-color: var(--body_color);
+  color: var(--text_color);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.rotate {
+  animation: spin 0.6s ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+#themeIcon{
+  display: inline-block;
+}
+.navegator {
+  background-color: var(--navegator_color);
+  padding: 10px;
+  display: flex;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  color: var(--text_color);
+}
+
+.theme-btn:hover {
+  transform: scale(1.2);
+}
+#logo {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background-color: var(--logo_color);
+}
+
+.search_box {
+  position: relative;
+  width: 90%;
+  height: 50px;
+  background-color: var(--search_box_color);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#search {
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  border: 0;
+  background-color: var(--search_input_color);
+  font-size: 24px;
+  padding: 10px;
+  transition: background-color 0.5s ease;
+}
+
+#search:hover {
+  background-color: var(--search_hover_color);
+  color: var(--text_color);
+}
+
+#search:focus {
+  background-color: var(--search_focus_color);
+  color: var(--text_color);
+  outline: none;
+  border: 3px solid #cfc876;
+}
+
+.core {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--core_color);
+  padding: 10px;
+  margin: 25px;
+  border-radius: 14px;
+  flex: 1;
+}
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 25px;
+  margin: 10px;
+  background-color: var(--card_color);
+  border-radius: 12px;
+  justify-content: flex-start;
+  gap: 20px;
+  box-shadow: 2px 1px 2px 1px rgba(0,0,0, 0.3);
+}
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: var(--container_color);
+  border-radius: 14px;
+  padding: 10px;
+  height: 300px;
+  gap: 10px;
+}
+.container .flower_notion{
+  width: 50%;
+  text-align: justify;
+}
+.infos{
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
+.flower_reward,
+.flower_penalty {
+  margin: 10px 0;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.flower_reward p{
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: green;
+}
+.flower_penalty p {
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: red;
+}
+.reward_topic,
+.penalty_topic {
+  margin-left: 15px;
+  margin-bottom: 4px;
+}
+.flower {
+  width: 500px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 25px;
+  display: block;
+  flex-shrink: 0; 
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--footer_color);
+  color: #f4f4f4;
+  height: 100px;
+  padding: 25px;
+}
+footer #social_medias .media{
+  width: 75px;
+  transition: transform 0.3s ease;
+}
+.media:hover{
+  transform: scale(0.9);
+}
