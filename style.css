@@ -208,4 +208,105 @@ footer #social_medias .media{
 }
 .media:hover{
   transform: scale(0.9);
+
+}
+/* Tablets (até 1024px) */
+@media (max-width: 1024px) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .flower {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .container .flower_notion {
+    width: 100%;
+  }
+
+  .infos {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    gap: 15px;
+  }
+
+  footer #social_medias .media {
+    width: 50px;
+  }
+}
+
+/* Celulares (até 768px) */
+@media (max-width: 768px) {
+  .navegator {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  #logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .search_box {
+    width: 100%;
+    height: auto;
+  }
+
+  #search {
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .core {
+    margin: 10px;
+    padding: 8px;
+  }
+
+  .card {
+    padding: 15px;
+    margin: 8px;
+  }
+
+  .flower {
+    width: 100%;
+    height: auto;
+  }
+
+  .container {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .container .flower_notion {
+    width: 100%;
+  }
+
+  .infos {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 15px;
+    gap: 10px;
+  }
+
+  footer #social_medias .media {
+    width: 40px;
+  }
 }
