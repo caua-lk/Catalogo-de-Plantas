@@ -247,7 +247,7 @@ footer #social_medias .media{
   }
 }
 
-/* Celulares (até 768px) */
+/* Celulares */
 @media (max-width: 768px) {
   .navegator {
     flex-direction: column;
