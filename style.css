@@ -210,6 +210,29 @@ footer #social_medias .media{
   transform: scale(0.9);
 
 }
+.catalogo-btn-container {
+  text-align: center;
+  margin-top: 20px;
+  
+}
+
+.catalogo-btn {
+  background-color: var(--body_color);
+  color: var(--text_color);
+  padding: 12px 24px;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  font-family: 'Patrick Hand', cursive;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.catalogo-btn:hover {
+  background-color: var(--core_color);
+  transform: scale(1.05);
+}
 /* Tablets (até 1024px) */
 @media (max-width: 1024px) {
   .card {
